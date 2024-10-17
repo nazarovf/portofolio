@@ -1,0 +1,261 @@
+/* Mengimpor font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Resetting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+}
+
+h1:first-of-type {
+    margin-bottom: 0.5px !important;
+}
+
+
+
+nav img.logo {
+    width: 120px; /* Ukuran default logo */
+    height: auto;
+}
+
+/* Menu item styles */
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 217, 0);
+}
+
+/* Detail section */
+.detail {
+    margin-left: 21%;
+    margin-top: 15%;
+}
+
+.detail h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 30px;
+}
+
+span {
+    color: rgb(255, 208, 0);
+}
+
+.detail p {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(73, 72, 72);
+    margin-bottom: 30px;
+}
+
+.detail a {
+    background: black;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+/* Image container */
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 2s, left 2s;
+}
+
+.images:hover .shape {
+    bottom: 40px;
+}
+
+.images:hover .saajed {
+    left: 45%;
+}
+
+.slide .item img {
+    width: 50%; /* Atur lebar gambar sesuai keinginan */
+    height: auto; /* Memastikan rasio aspek tetap */
+    margin-top: 20px; /* Jarak antara gambar dan konten di bawahnya */
+}
+
+/* Responsiveness for 1024px */
+@media screen and (max-width: 1440px) {
+    nav {
+        width: 80%; /* Adjusted navigation width */
+    }
+
+    .detail {
+        margin-left: 15%;
+        margin-top: 12%;
+    }
+
+    .detail h1 {
+        font-size: 45px; /* Slightly smaller font size */
+    }
+
+    .detail p {
+        font-size: 18px;
+    }
+
+    .images {
+        width: 20%; /* Adjusted width for images */
+        right: 120px;
+    }
+}
+
+/* Responsiveness for 768px */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Vertically stacked navigation */
+        padding: 10px 0;
+        width: 90%; /* More compact navigation */
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column; /* Menu items stacked vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav img.logo {
+        width: 100px; /* Smaller logo */
+    }
+
+    .detail {
+        margin-left: 5%;
+        margin-top: 10%;
+        text-align: center; /* Centered text */
+    }
+
+    .detail h1 {
+        font-size: 35px;
+    }
+
+    .detail p {
+        font-size: 16px;
+    }
+
+    .images {
+        width: 70%; /* Adjust image size */
+        height: auto;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .images .shape {
+        width: 100%; /* Size for shape image */
+        position: relative;
+        left: 100%;
+        z-index: 1;
+    }
+
+    .images .saajed {
+        width: 50%; /* Size for saajed image */
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+}
+
+/* Responsiveness for 480px and smaller */
+@media screen and (max-width: 480px) {
+    nav img.logo {
+        width: 80px; /* Smaller logo */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Smaller font size for navigation */
+    }
+
+    .detail {
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+
+    .detail h1 {
+        font-size: 28px;
+    }
+
+    .detail p {
+        font-size: 14px;
+    }
+
+    .images img {
+        width: 60%; /* Smaller images for small screens */
+    }
+
+    .images .shape {
+        width: 100%; /* Size for shape image */
+        position: relative;
+        left: 120%;
+        z-index: 1;
+    }
+
+    .images .saajed {
+        width: 50%; /* Size for saajed image */
+        position: absolute;
+        top: 0;
+        left: 120%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+}
